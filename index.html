@@ -1,1 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b09">
+<title>Fursat Kitchen & Bar | Madhapur, Hyderabad</title>
+<meta name="description" content="Fursat Kitchen & Bar — South Indian flavours, vegetarian favourites and non-vegetarian classics in Madhapur, Hyderabad.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0a0a08;
+  --surface:#11110e;
+  --surface2:#171612;
+  --cream:#f7f2e8;
+  --muted:#a9a59c;
+  --gold:#e6b968;
+  --gold2:#f1cc82;
+  --line:rgba(255,255,255,.11);
+  --green:#6f9a70;
+  --red:#c76b62;
+  --radius:28px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:"Manrope",sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+  z-index:9999;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{width:100%;display:block}
+
+/* NAV */
+.navbar{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:86px;
+  padding:0 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index:1000;
+  transition:.35s ease;
+}
+.navbar.scrolled{
+  background:rgba(10,10,8,.9);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;flex-direction:column}
+.brand-name{
+  font-family:"Playfair Display",serif;
+  font-size:30px;
+  letter-spacing:5px;
+  line-height:1;
+}
+.brand-sub{
+  margin-top:8px;
+  font-size:8px;
+  letter-spacing:5px;
+  color:var(--gold2);
+  font-weight:700;
+}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1.2px;
+  color:#d7d2c9;
+}
+.nav-links a:hover{color:var(--gold2)}
+.nav-call{
+  padding:12px 20px;
+  border:1px solid var(--line);
+  border-radius:100px;
+  font-size:12px;
+  font-weight:700;
+}
+.nav-call:hover{border-color:var(--gold);color:var(--gold2)}
+.menu-toggle{
+  display:none;
+  border:0;
+  background:none;
+  color:#fff;
+  font-size:32px;
+  line-height:1;
+}
+
+/* HERO */
+.hero{
+  min-height:100svh;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(5,5,4,.97) 0%,rgba(5,5,4,.82) 34%,rgba(5,5,4,.30) 72%,rgba(5,5,4,.55) 100%),
+    linear-gradient(0deg,rgba(5,5,4,.96) 0%,transparent 58%),
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2200&q=90");
+  background-size:cover;
+  background-position:center;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:420px;height:420px;
+  right:-160px;top:15%;
+  border:1px solid rgba(230,185,105,.18);
+  border-radius:50%;
+  box-shadow:0 0 100px rgba(230,185,105,.08);
+}
+.hero-content{
+  width:100%;
+  max-width:1320px;
+  margin:auto;
+  padding:170px 5% 90px;
+  position:relative;
+  z-index:2;
+}
+.hero-kicker{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:var(--gold2);
+  font-size:11px;
+  letter-spacing:4px;
+  font-weight:800;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+.hero-kicker:before{
+  content:"";
+  width:42px;height:1px;
+  background:var(--gold);
+}
+.hero h1{
+  max-width:900px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(58px,8.5vw,116px);
+  font-weight:500;
+  line-height:.9;
+  letter-spacing:-5px;
+}
+.hero h1 .accent{color:var(--gold2)}
+.hero-copy{
+  max-width:590px;
+  margin-top:30px;
+  color:rgba(255,255,255,.74);
+  font-size:16px;
+  line-height:1.8;
+}
+.hero-info{
+  display:flex;
+  gap:55px;
+  margin-top:34px;
+}
+.hero-info small{
+  display:block;
+  color:var(--gold2);
+  font-size:9px;
+  letter-spacing:2px;
+  font-weight:800;
+  margin-bottom:5px;
+}
+.hero-info span{font-size:13px;color:#e4dfd6}
+.hero-actions{
+  display:flex;
+  gap:12px;
+  margin-top:35px;
+}
+.btn{
+  min-height:54px;
+  padding:0 28px;
+  border-radius:100px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:800;
+  transition:.25s ease;
+}
+.btn-gold{background:var(--gold2);color:#17130b}
+.btn-gold:hover{transform:translateY(-2px);background:#f6d894}
+.btn-glass{
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(10px);
+}
+.btn-glass:hover{border-color:var(--gold);color:var(--gold2)}
+
+/* INTRO */
+.intro{
+  padding:120px 5%;
+  background:var(--bg);
+}
+.intro-grid{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:80px;
+}
+.label{
+  color:var(--gold2);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+.intro h2{
+  margin-top:20px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(43px,5vw,70px);
+  line-height:1.02;
+  font-weight:500;
+}
+.intro-copy{
+  padding-top:28px;
+  max-width:680px;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.9;
+}
+.intro-rule{
+  margin-top:32px;
+  width:100px;height:1px;
+  background:var(--gold);
+}
+
+/* EXPERIENCE */
+.experience{
+  padding:0 5% 125px;
+  background:var(--bg);
+}
+.experience-head{
+  max-width:1250px;
+  margin:0 auto 42px;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+}
+.experience-head h2{
+  margin-top:14px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(42px,5vw,68px);
+  line-height:1;
+  font-weight:500;
+}
+.experience-head p{
+  max-width:360px;
+  color:var(--muted);
+  font-size:13px;
+}
+.experience-grid{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+}
+.experience-left,.experience-right{
+  display:grid;
+  gap:18px;
+}
+.experience-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  min-height:360px;
+  isolation:isolate;
+}
+.experience-card.tall{min-height:610px}
+.experience-card img{
+  height:100%;
+  min-height:inherit;
+  object-fit:cover;
+  transition:transform .8s ease;
+}
+.experience-card:hover img{transform:scale(1.045)}
+.experience-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.03) 70%);
+}
+.card-content{
+  position:absolute;
+  z-index:2;
+  left:30px;right:30px;bottom:28px;
+}
+.card-number{
+  color:var(--gold2);
+  font-size:10px;
+  letter-spacing:3px;
+  font-weight:800;
+}
+.card-content h3{
+  margin-top:7px;
+  font-family:"Playfair Display",serif;
+  font-size:38px;
+  font-weight:500;
+  line-height:1;
+}
+.card-content p{
+  margin-top:8px;
+  color:rgba(255,255,255,.7);
+  font-size:13px;
+}
+.experience-right .experience-card{min-height:295px}
+
+/* MENU */
+.menu-section{
+  padding:125px 5% 140px;
+  background:#10100d;
+}
+.menu-head{
+  max-width:1250px;
+  margin:auto;
+}
+.menu-head h2{
+  margin-top:15px;
+  max-width:780px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(50px,7vw,88px);
+  font-weight:500;
+  line-height:.94;
+  letter-spacing:-2px;
+}
+.menu-head p{
+  max-width:590px;
+  margin-top:25px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.8;
+}
+.filters{
+  max-width:1250px;
+  margin:45px auto 30px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.filter-btn{
+  position:relative;
+  border:1px solid var(--line);
+  background:transparent;
+  color:#b7b2a9;
+  padding:13px 24px;
+  border-radius:100px;
+  font-size:12px;
+  font-weight:700;
+  transition:.25s;
+}
+.filter-btn.active{
+  background:var(--gold2);
+  color:#17130b;
+  border-color:var(--gold2);
+}
+.filter-btn.veg:before,.filter-btn.nonveg:before{
+  content:"";
+  display:inline-block;
+  width:7px;height:7px;
+  border-radius:50%;
+  margin-right:9px;
+  vertical-align:1px;
+}
+.filter-btn.veg:before{background:var(--green)}
+.filter-btn.nonveg:before{background:var(--red)}
+.menu-grid{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.menu-card{
+  background:#161511;
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  transition:.3s ease;
+}
+.menu-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(230,185,105,.35);
+}
+.menu-image{
+  height:250px;
+  overflow:hidden;
+  position:relative;
+}
+.menu-image img{height:100%;object-fit:cover;transition:.6s}
+.menu-card:hover .menu-image img{transform:scale(1.05)}
+.food-type{
+  position:absolute;
+  top:16px;left:16px;
+  width:28px;height:28px;
+  border-radius:50%;
+  background:rgba(10,10,8,.85);
+  backdrop-filter:blur(8px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.2);
+}
+.food-type:after{
+  content:"";
+  width:8px;height:8px;
+  border-radius:50%;
+}
+.food-type.veg:after{background:var(--green)}
+.food-type.nonveg:after{background:var(--red)}
+.menu-info{padding:22px}
+.menu-row{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+.menu-name{
+  font-family:"Playfair Display",serif;
+  font-size:22px;
+  line-height:1.1;
+}
+.menu-price{
+  color:var(--gold2);
+  white-space:nowrap;
+  font-weight:700;
+}
+.menu-description{
+  margin-top:9px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.7;
+}
+
+/* LOCATION */
+.location{
+  padding:125px 5%;
+  background:var(--bg);
+}
+.location-box{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border:1px solid var(--line);
+  border-radius:32px;
+  overflow:hidden;
+}
+.location-info{padding:65px;background:#11110e}
+.location-info h2{
+  margin-top:16px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(45px,5vw,68px);
+  line-height:.98;
+  font-weight:500;
+}
+.details{margin-top:42px;display:grid;gap:25px}
+.detail{
+  display:grid;
+  grid-template-columns:46px 1fr;
+  gap:16px;
+  align-items:start;
+}
+.detail-icon{
+  width:42px;height:42px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold2);
+  font-size:13px;
+}
+.detail small{
+  display:block;
+  color:#817d75;
+  font-size:11px;
+  margin-bottom:4px;
+}
+.detail strong{
+  font-size:15px;
+  font-weight:600;
+}
+.location-actions{display:flex;gap:10px;margin-top:35px}
+.map{
+  min-height:600px;
+  display:flex;
+  align-items:flex-end;
+  padding:28px;
+  background:
+    linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%),
+    url("https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=1500&q=85");
+  background-size:cover;
+  background-position:center;
+}
+.map-caption{
+  width:100%;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(10,10,8,.72);
+  backdrop-filter:blur(14px);
+  border-radius:20px;
+}
+.map-caption strong{display:block;font-size:15px}
+.map-caption span{display:block;color:#aaa69d;font-size:12px;margin-top:4px}
+
+/* RESERVATION */
+.reservation{
+  padding:140px 5%;
+  text-align:center;
+  background:
+    linear-gradient(rgba(8,8,7,.84),rgba(8,8,7,.93)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=90");
+  background-size:cover;
+  background-position:center;
+}
+.reservation h2{
+  max-width:900px;
+  margin:18px auto 20px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(48px,7vw,92px);
+  line-height:.96;
+  font-weight:500;
+}
+.reservation p{max-width:570px;margin:auto;color:var(--muted);font-size:14px}
+.reservation .btn{margin-top:34px}
+
+/* FOOTER */
+footer{
+  padding:70px 5% 120px;
+  background:#080807;
+  border-top:1px solid var(--line);
+}
+.footer-inner{
+  max-width:1250px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:50px;
+}
+.footer-copy{max-width:340px;color:var(--muted);font-size:12px;margin-top:18px}
+.footer-links{display:flex;gap:28px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:#aaa69d}
+.footer-links a:hover{color:var(--gold2)}
+.footer-bottom{
+  max-width:1250px;
+  margin:55px auto 0;
+  padding-top:22px;
+  border-top:1px solid var(--line);
+  color:#68655f;
+  font-size:10px;
+}
+
+/* MOBILE MENU + BOTTOM BAR */
+.mobile-menu{
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  background:rgba(8,8,7,.98);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu-inner{text-align:center}
+.mobile-menu a{
+  display:block;
+  font-family:"Playfair Display",serif;
+  font-size:40px;
+  margin:20px;
+}
+.close-menu{
+  position:absolute;
+  top:24px;right:25px;
+  border:0;background:none;color:#fff;
+  font-size:32px;
+}
+.mobile-bar{
+  display:none;
+}
+
+@media(max-width:850px){
+  .navbar{height:72px;padding:0 24px}
+  .nav-links,.nav-call{display:none}
+  .menu-toggle{display:block}
+  .brand-name{font-size:26px}
+  .hero{min-height:100svh;background-position:65% center}
+  .hero-content{padding:145px 24px 112px}
+  .hero-kicker{font-size:9px;letter-spacing:3px}
+  .hero h1{
+    font-size:clamp(54px,16vw,82px);
+    letter-spacing:-3px;
+    line-height:.91;
+  }
+  .hero-copy{font-size:14px;line-height:1.7;margin-top:25px}
+  .hero-info{gap:28px;margin-top:28px}
+  .hero-info span{font-size:11px}
+  .hero-actions{flex-direction:column;margin-top:30px}
+  .btn{width:100%}
+
+  .intro{padding:90px 24px}
+  .intro-grid{grid-template-columns:1fr;gap:15px}
+  .intro-copy{padding-top:5px;font-size:15px}
+
+  .experience{padding:0 24px 90px}
+  .experience-head{display:block;margin-bottom:28px}
+  .experience-head p{margin-top:18px}
+  .experience-grid{grid-template-columns:1fr}
+  .experience-left,.experience-right{grid-template-columns:1fr}
+  .experience-card,.experience-card.tall,.experience-right .experience-card{
+    min-height:430px;
+  }
+  .experience-right{grid-template-columns:1fr 1fr}
+  .experience-right .experience-card{min-height:250px}
+  .card-content h3{font-size:30px}
+
+  .menu-section{padding:90px 24px 125px}
+  .menu-head h2{font-size:54px;letter-spacing:-2px}
+  .menu-head p{font-size:14px}
+  .filters{margin-top:35px}
+  .filter-btn{padding:12px 17px}
+  .menu-grid{grid-template-columns:1fr}
+  .menu-image{height:275px}
+
+  .location{padding:90px 24px}
+  .location-box{grid-template-columns:1fr}
+  .location-info{padding:40px 28px}
+  .map{min-height:350px}
+  .location-actions{flex-direction:column}
+
+  .reservation{padding:100px 24px 145px;background-attachment:scroll}
+  .reservation h2{font-size:54px}
+
+  .footer-inner{flex-direction:column}
+  .footer-links{gap:18px}
+
+  .mobile-bar{
+    position:fixed;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    left:16px;right:16px;bottom:15px;
+    height:74px;
+    z-index:2500;
+    background:rgba(17,16,13,.95);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:24px;
+    box-shadow:0 16px 50px rgba(0,0,0,.5);
+  }
+  .mobile-bar a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    color:#aaa69d;
+    font-size:10px;
+    font-weight:600;
+  }
+  .mobile-bar a:first-child{color:var(--gold2)}
+  .bar-icon{
+    width:20px;height:20px;
+    border:1px solid currentColor;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10px;
+  }
+}
+
+@media(max-width:480px){
+  .hero-content{padding-left:22px;padding-right:22px}
+  .hero h1{font-size:55px}
+  .hero:after{display:none}
+  .experience-right{grid-template-columns:1fr}
+  .experience-right .experience-card{min-height:300px}
+  .menu-head h2{font-size:50px}
+  .reservation h2{font-size:48px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar" id="navbar">
+  <a href="#home" class="brand">
+    <span class="brand-name">FURSAT</span>
+    <span class="brand-sub">KITCHEN & BAR</span>
+  </a>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#location">Location</a></li>
+    </ul>
+  </nav>
+
+  <a class="nav-call" href="tel:09059670033">Call Restaurant</a>
+  <button class="menu-toggle" onclick="openMenu()" aria-label="Open menu">☰</button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" onclick="closeMenu()" aria-label="Close menu">×</button>
+  <div class="mobile-menu-inner">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#experience" onclick="closeMenu()">Experience</a>
+    <a href="#menu" onclick="closeMenu()">Menu</a>
+    <a href="#location" onclick="closeMenu()">Location</a>
+    <a href="tel:09059670033" onclick="closeMenu()">Call</a>
+  </div>
+</div>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-kicker">Madhapur · Hyderabad · South Indian</div>
+
+    <h1>
+      Come hungry.<br>
+      Stay for the<br>
+      <span class="accent">moment.</span>
+    </h1>
+
+    <p class="hero-copy">
+      South Indian flavours, comforting classics and relaxed evenings —
+      served in a space made for good food and better conversations.
+    </p>
+
+    <div class="hero-info">
+      <div>
+        <small>LOCATION</small>
+        <span>VIP Hills, Madhapur</span>
+      </div>
+      <div>
+        <small>HOURS</small>
+        <span>Open · Closes 12 AM</span>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#menu" class="btn btn-gold">Explore the Menu</a>
+      <a href="https://wa.me/919059670033" class="btn btn-glass">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="intro-grid">
+    <div>
+      <div class="label">The Fursat Experience</div>
+      <h2>Food that gives you a reason to stay.</h2>
+    </div>
+    <div class="intro-copy">
+      Fursat Kitchen & Bar brings together familiar South Indian flavours,
+      vegetarian favourites and non-vegetarian classics in a relaxed,
+      contemporary setting in Madhapur.
+      <div class="intro-rule"></div>
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <div class="experience-head">
+    <div>
+      <div class="label">More Than A Meal</div>
+      <h2>Made for good evenings.</h2>
+    </div>
+    <p>From quick catch-ups to long dinners, every corner is designed around the experience.</p>
+  </div>
+
+  <div class="experience-grid">
+    <div class="experience-left">
+      <article class="experience-card tall">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1500&q=85" alt="Restaurant dining space">
+        <div class="card-content">
+          <div class="card-number">01 / THE SPACE</div>
+          <h3>Comfort Dining</h3>
+          <p>Relaxed food. Relaxed conversations.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="experience-right">
+      <article class="experience-card">
+        <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1200&q=85" alt="Fresh dining table">
+        <div class="card-content">
+          <div class="card-number">02 / THE EVENING</div>
+          <h3>Good Evenings</h3>
+          <p>Make dinner feel like an occasion.</p>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85" alt="Beautifully plated food">
+        <div class="card-content">
+          <div class="card-number">03 / THE MOMENT</div>
+          <h3>Fursat Moments</h3>
+          <p>Slow down. Share more. Enjoy.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div class="menu-head">
+    <div class="label">The Menu</div>
+    <h2>Something for<br>every craving.</h2>
+    <p>
+      A selection of South Indian favourites, vegetarian dishes and
+      non-vegetarian classics. Use the filters to explore.
+    </p>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all" onclick="filterMenu('all',this)">All Dishes</button>
+    <button class="filter-btn veg" data-filter="veg" onclick="filterMenu('veg',this)">Vegetarian</button>
+    <button class="filter-btn nonveg" data-filter="nonveg" onclick="filterMenu('nonveg',this)">Non-Vegetarian</button>
+  </div>
+
+  <div class="menu-grid">
+
+    <article class="menu-card" data-category="veg">
+      <div class="menu-image">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Vegetable samosa">
+        <span class="food-type veg" aria-label="Vegetarian"></span>
+      </div>
+      <div class="menu-info">
+        <div class="menu-row">
+          <h3 class="menu-name">Crispy Samosa</h3>
+          <span class="menu-price">₹120</span>
+        </div>
+        <p class="menu-description">Golden pastry filled with a spiced potato and vegetable mixture.</p>
+      </div>
+    </article>
+
+    <article class="menu-card" data-category="veg">
+      <div class="menu-image">
+        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=900&q=85" alt="South Indian dosa">
+        <span class="food-type veg" aria-label="Vegetarian"></span>
+      </div>
+      <div class="menu-info">
+        <div class="menu-row">
+          <h3 class="menu-name">Masala Dosa</h3>
+          <span class="menu-price">₹180</span>
+        </div>
+        <p class="menu-description">Crisp dosa with seasoned potato filling, chutney and sambar.</p>
+      </div>
+    </article>
+
+    <article class="menu-card" data-category="veg">
+      <div class="menu-image">
+        <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=900&q=85" alt="Paneer dish">
+        <span class="food-type veg" aria-label="Vegetarian"></span>
+      </div>
+      <div class="menu-info">
+        <div class="menu-row">
+          <h3 class="menu-name">Paneer Starter</h3>
+          <span class="menu-price">₹260</span>
+        </div>
+        <p class="menu-description">Soft paneer with aromatic spices and a lightly charred finish.</p>
+      </div>
+    </article>
+
+    <article class="menu-card" data-category="nonveg">
+      <div class="menu-image">
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85" alt="Chicken curry">
+        <span class="food-type nonveg" aria-label="Non-vegetarian"></span>
+      </div>
+      <div class="menu-info">
+        <div class="menu-row">
+          <h3 class="menu-name">Chicken Curry</h3>
+          <span class="menu-price">₹320</span>
+        </div>
+        <p class="menu-description">Tender chicken cooked in a rich South Indian style masala.</p>
+      </div>
+    </article>
+
+    <article class="menu-card" data-category="nonveg">
+      <div class="menu-image">
+        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=900&q=85" alt="Chicken biryani">
+        <span class="food-type nonveg" aria-label="Non-vegetarian"></span>
+      </div>
+      <div class="menu-info">
+        <div class="menu-row">
+          <h3 class="menu-name">Chicken Biryani</h3>
+          <span class="menu-price">₹360</span>
+        </div>
+        <p class="menu-description">Fragrant rice layered with spiced chicken and aromatic herbs.</p>
+      </div>
+    </article>
+
+    <article class="menu-card" data-category="nonveg">
+      <div class="menu-image">
+        <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=85" alt="Mutton dish">
+        <span class="food-type nonveg" aria-label="Non-vegetarian"></span>
+      </div>
+      <div class="menu-info">
+        <div class="menu-row">
+          <h3 class="menu-name">Mutton Special</h3>
+          <span class="menu-price">₹420</span>
+        </div>
+        <p class="menu-description">Slow-cooked mutton finished with a bold, aromatic spice blend.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="location" id="location">
+  <div class="location-box">
+    <div class="location-info">
+      <div class="label">Visit Fursat</div>
+      <h2>Come find<br>your table.</h2>
+
+      <div class="details">
+        <div class="detail">
+          <div class="detail-icon">•</div>
+          <div>
+            <small>ADDRESS</small>
+            <strong>Capital Pk Rd, Ayyappa Society, VIP Hills, Madhapur, Hyderabad 500081</strong>
+          </div>
+        </div>
+
+        <div class="detail">
+          <div class="detail-icon">T</div>
+          <div>
+            <small>PHONE</small>
+            <strong>090596 70033</strong>
+          </div>
+        </div>
+
+        <div class="detail">
+          <div class="detail-icon">O</div>
+          <div>
+            <small>HOURS</small>
+            <strong>Open · Closes 12 AM</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="location-actions">
+        <a href="tel:09059670033" class="btn btn-gold">Call Restaurant</a>
+        <a href="https://wa.me/919059670033" class="btn btn-glass">WhatsApp</a>
+      </div>
+    </div>
+
+    <a class="map" href="https://www.google.com/maps/search/?api=1&query=Fursat+Kitchen+%26+Bar+Madhapur+Hyderabad" target="_blank" rel="noopener">
+      <div class="map-caption">
+        <strong>Fursat Kitchen & Bar</strong>
+        <span>Open location in Google Maps →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="reservation">
+  <div class="label">Your Table Awaits</div>
+  <h2>Make time for<br>good food.</h2>
+  <p>Planning dinner, meeting friends or celebrating something special? Get in touch with Fursat Kitchen & Bar.</p>
+  <a href="tel:09059670033" class="btn btn-gold">Call to Reserve</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="#home" class="brand">
+        <span class="brand-name">FURSAT</span>
+        <span class="brand-sub">KITCHEN & BAR</span>
+      </a>
+      <p class="footer-copy">South Indian flavours, relaxed dining and memorable evenings in Madhapur, Hyderabad.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#experience">Experience</a>
+      <a href="#menu">Menu</a>
+      <a href="#location">Location</a>
+      <a href="tel:09059670033">Call</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Fursat Kitchen & Bar · Madhapur, Hyderabad</div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="#menu"><span class="bar-icon">≡</span><span>Menu</span></a>
+  <a href="tel:09059670033"><span class="bar-icon">T</span><span>Call</span></a>
+  <a href="https://wa.me/919059670033"><span class="bar-icon">W</span><span>WhatsApp</span></a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Fursat+Kitchen+%26+Bar+Madhapur+Hyderabad" target="_blank"><span class="bar-icon">+</span><span>Map</span></a>
+</div>
+
+<script>
+window.addEventListener("scroll",()=>{
+  document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>45);
+});
+
+function openMenu(){
+  document.getElementById("mobileMenu").classList.add("open");
+}
+function closeMenu(){
+  document.getElementById("mobileMenu").classList.remove("open");
+}
+
+function filterMenu(category,button){
+  document.querySelectorAll(".filter-btn").forEach(btn=>btn.classList.remove("active"));
+  button.classList.add("active");
+
+  document.querySelectorAll(".menu-card").forEach(card=>{
+    const show = category==="all" || card.dataset.category===category;
+    card.style.display = show ? "" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
